@@ -55,4 +55,4 @@
 |Add CSS animations|L|3hrs|0|0|
 |Further CSS styling|L|3hrs|0|0|
 |Utilize second API for full screen mode|L|2hrs|0|0|
-| Total |H|0| 17hr |0 |
+| Total |H|17hrs|0|0 |
