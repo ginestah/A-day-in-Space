@@ -1,6 +1,6 @@
 
 - **App Title**: Happy Space Day
-- **App Description**: Access photo of the day from NASA API to display the photo of a user chosen day, as well as a description of the photo.
+- **App Description**: Access photo of the day from NASA API to display the photo of a users chosen day, as well as a description of the photo.
 - **API**: 
 1. I plan to use the NASA APOD API to fetch photos and descriptions.
 [Link to API](https://api.nasa.gov/)
