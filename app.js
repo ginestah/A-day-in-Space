@@ -11,15 +11,23 @@ async function fetchData(date) {
   }
 }
 
+
 //function to append content to the DOM
-let nasaPhoto = `
+function showNasaPhoto() {
+  let nasaPhoto = `
 <img src='${data.hdurl}
 `
+}
 
 
 
 
 //Dynamically search dates to choose photo using html input
+let button = document.querySelector('#search')
+button.addEventListener('click', (e) => {
+  e.preventDefault()
+  let value = document.querySelector('#date-input').value
+})
 
 
 //remove photo if another photo is searched
