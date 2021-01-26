@@ -1,22 +1,17 @@
-.title{
-  flex-direction: row;
-  margin: 0 auto;
-  align-self: center;
-}
-.search-section{
-  align-self: center;
-}
+
 
 body{
   display: flex;
-  justify-content: space-between;
-align-content: center;
   color:#feda4a;
   background-repeat: no-repeat;
   background-size:cover;
   width: 100%;
   height: 100%;
   background-color: black;
+}
+.title{
+}
+.search-section{
 }
 .format-label{
 
