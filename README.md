@@ -49,11 +49,15 @@ Happy Space Day
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Grabbing input data to choose API Data to render on DOM | H | 3hrs| 0|0|
-| Basic HTML and CSS| H | 1hrs|0 | 0 |
-|Reset DOM if another date is searched, so no stacked photos|M|1hr|0|0|
+| Render applicable content to the DOM | H | 3hrs| 0|0|
+| User search picture by date| H | 3hrs| 0|0|
+| Adjust time for dates pre 1995|M|3hrs|0|0|
+| Basic HTML and CSS| H | 2hrs|0 | 0 |
+| Define flex items and containers| H | 2hrs|0 | 0 |
+|Reset DOM if another date is searched, so no stacked photos|M|2hr|0|0|
 |Media Queries for responsive design|L|3hrs|0|0|
 |Add CSS animations|L|3hrs|0|0|
 |Further CSS styling|L|3hrs|0|0|
 |Utilize second API for full screen mode|L|2hrs|0|0|
-| Total |H|17hrs|0|0 |
+|Look into system storage for saving photos|M|3hr|0|0|
+| Total |H|29hrs|0|0|
