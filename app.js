@@ -3,7 +3,8 @@
 async function fetchData(date) {
   try {
     let response = await axios.get(`https://api.nasa.gov/planetary/apod/?date=${date}&api_key=dJXmtgi5Ot3o758TqppoAXRJ2SRTk6sTEtJ141dM`)
-    const data = response
+    const data = response.data
+    showNasaPhoto(data)
     console.log(data)
     return response
   } catch (error) {
@@ -13,10 +14,13 @@ async function fetchData(date) {
 
 
 //function to append content to the DOM
-function showNasaPhoto() {
+function showNasaPhoto(data) {
   let nasaPhoto = `
-<img src='${data.hdurl}
+<img src='${data.hdurl}'>
 `
+  let photoContainer = document.querySelector('#photo-container')
+  photoContainer.insertAdjacentHTML('beforeend', nasaPhoto)
+
 }
 
 
