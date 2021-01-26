@@ -1,5 +1,6 @@
 
-- **App Title**: Happy Space Day
+#  **App Title**:
+Happy Space Day
 - **App Description**: Access photo of the day from NASA API to display the photo of a users chosen day, as well as a description of the photo.
 - **API**: 
 1. I plan to use the NASA APOD API to fetch photos and descriptions.
@@ -33,10 +34,10 @@
 |  Day | Deliverable | Status
 |---|---| ---|
 |Jan 25-26| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
-|Jan 26| Project Approval | Incomplete
-|Jan 27| Core Application Structure (HTML, CSS, etc.) | Incomplete
-|Jan 28| Initial Clickable Model  | Incomplete
-|Jan 29| MVP | Incomplete
+|Jan 26| Project Approval + Pseudocode | Incomplete
+|Jan 27| MVP | Incomplete
+|Jan 28| Advanced styling| Incomplete
+|Jan 29| Desktop styling | Incomplete
 |Feb 1| Presentations/Project Submission | Incomplete
 
 - **Priority Matrix**
