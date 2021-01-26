@@ -14,13 +14,17 @@ async function fetchData(date) {
 
 
 //function to append content to the DOM
-function showNasaPhoto(data) {
-  let nasaPhoto = `
-<img src='${data.hdurl}'>
-`
-  let photoContainer = document.querySelector('#photo-container')
-  photoContainer.insertAdjacentHTML('beforeend', nasaPhoto)
+// function showNasaPhoto(data) {
+//   let nasaPhoto = `
+// <img src='${data.hdurl}'>
+// `
+//   let photoContainer = document.querySelector('#photo-container')
+//   photoContainer.insertAdjacentHTML('beforeend', nasaPhoto)
 
+// }
+
+function showNasaPhoto(data) {
+  document.querySelector('body').style.backgroundImage = `url('${data.hdurl}')`
 }
 
 
