@@ -14,6 +14,7 @@ async function fetchData(date) {
 }
 
 
+
 //function to append content to the DOM
 // function showNasaPhoto(data) {
 //   let nasaPhoto = `

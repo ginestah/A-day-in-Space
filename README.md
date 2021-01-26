@@ -50,12 +50,12 @@ Access photo of the day from NASA API to display the photo of a users chosen day
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Render applicable content to the DOM | H | 3hrs| 0|0|
-| User search picture by date| H | 3hrs| 0|0|
+| Render applicable content to the DOM | H | 3hrs| 1hr|1hr|
+| User search picture by date| H | 3hrs| 30mins|30mins|
 | Adjust time for dates pre 1995|M|3hrs|0|0|
 | Basic HTML and CSS| H | 2hrs|0 | 0 |
 | Define flex items and containers| H | 2hrs|0 | 0 |
-|Reset DOM if another date is searched, so no stacked photos|M|2hr|0|0|
+|Reset DOM if another date is searched, so no stacked photos|M|2hr|2hrs|2hrs|
 |Media Queries for responsive design|L|3hrs|0|0|
 |Add CSS animations|L|3hrs|0|0|
 |Further CSS styling|L|3hrs|0|0|
@@ -83,6 +83,6 @@ function showNasaPhoto(data) {
 ```
 
 # Change-log
-
+Decided to display image of the day as a background
 
 
