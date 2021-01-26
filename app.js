@@ -27,6 +27,7 @@ let button = document.querySelector('#search')
 button.addEventListener('click', (e) => {
   e.preventDefault()
   let value = document.querySelector('#date-input').value
+  fetchData(value)
 })
 
 
