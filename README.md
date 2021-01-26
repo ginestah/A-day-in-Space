@@ -33,7 +33,7 @@ Happy Space Day
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|Jan 25-26| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
+|Jan 25-26| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
 |Jan 26| Project Approval + Pseudocode | Incomplete
 |Jan 27| MVP | Incomplete
 |Jan 28| Advanced styling| Incomplete
