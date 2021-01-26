@@ -67,7 +67,8 @@ Access photo of the day from NASA API to display the photo of a users chosen day
 
 Added function to add photo as a background image, display the photo description and copyright. The if statement checks to see if there is a copyright on the image, if undefined copyright is given to NASA APOD, otherwise the photographer is shown as copyright holder.
 
-``` function showNasaPhoto(data) {
+``` 
+function showNasaPhoto(data) {
   if (data.copyright == undefined) {
     data.copyright = "NASA APOD"
   }
