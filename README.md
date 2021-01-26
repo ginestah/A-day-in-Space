@@ -35,7 +35,7 @@ Access photo of the day from NASA API to display the photo of a users chosen day
 |  Day | Deliverable | Status
 |---|---| ---|
 |Jan 25-26| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
-|Jan 26| Project Approval + Pseudocode | Incomplete
+|Jan 26| Project Approval + Pseudocode | Complete
 |Jan 27| MVP | Incomplete
 |Jan 28| Advanced styling| Incomplete
 |Jan 29| Desktop styling | Incomplete
@@ -63,4 +63,25 @@ Access photo of the day from NASA API to display the photo of a users chosen day
 |Look into system storage for saving photos|M|3hr|0|0|
 | Total |H|29hrs|0|0|
 
+# Code-Snippet
+
+Added function to add photo as a background image, display the photo description and copyright. The if statement checks to see if there is a copyright on the image, if undefined copyright is given to NASA APOD, otherwise the photographer is shown as copyright holder.
+
+``` function showNasaPhoto(data) {
+  if (data.copyright == undefined) {
+    data.copyright = "NASA APOD"
+  }
+  let nasaDescription = `
+  <p id="photo-explanation">${data.explanation}</p>
+  <footer class='copyright'>&copy;${data.copyright}</footer>
+  `
+  let explanationContainer = document.querySelector('#explanation-container')
+  explanationContainer.insertAdjacentHTML('beforeend', nasaDescription)
+  document.querySelector('body').style.backgroundImage = `url('${data.hdurl}')`
+}
+```
+
 # Change-log
+
+
+
