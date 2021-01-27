@@ -24,10 +24,22 @@ function showNasaPhoto(data) {
   let nasaDescription = `
   <p id="photo-explanation">${data.explanation}</p>
   <footer class='copyright'>&copy;${data.copyright}</footer>
+  <button id="save">Save Photo for Session</button>
   `
+  //create even listener for save photo button
+
   let explanationContainer = document.querySelector('#explanation-container')
   explanationContainer.insertAdjacentHTML('beforeend', nasaDescription)
   document.querySelector('body').style.backgroundImage = `url('${data.hdurl}')`
+
+  //create event listener for save photo button that appears with previous function
+  let photoSave = `
+  <img src="${data.hdurl}" alt="saved image" width="200px" height="auto">
+  `
+  document.querySelector('#save').addEventListener('click', () => {
+    let photoContainer = document.querySelector('#photo-save')
+    photoContainer.insertAdjacentHTML('beforeend', photoSave)
+  })
 }
 
 

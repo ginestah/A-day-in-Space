@@ -1,21 +1,26 @@
 
 
 body{
-  display: flex;
+  display: grid;
+grid-template-columns:40px 50px auto 50px 40px ;
+grid-template-rows:25% 100px auto ;
+
+
+
   color:#feda4a;
   background-repeat: no-repeat;
   background-size:cover;
-  width: 100%;
-  height: 100%;
-  background-color: black;
+  background-color:#2D2D2A;
 }
-.title{
+#title{
+grid-column-start: 3;
 }
-.search-section{
-}
-.format-label{
+#search-section{
+  grid-column-start: 3;
+  grid-row-start: 4;
 
 }
+
 #photo-explanation{
   color:#feda4a;
 }

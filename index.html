@@ -4,20 +4,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Happy Space Day</title>
   <link rel="stylesheet" href="./style.css">
   <script defer src='./app.js'></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
-  <h1 class='title'>Happy Space Day</h1>
-  <div class="search-section">
-    <h3 class='format-label'> Enter a date to see NASA photo of that day</h3>
+  <h1 id='title'>Happy Space Day</h1>
+  <div id="search-section">
+    <h3 id='format-label'> Enter a date to see NASA photo of that day</h3>
     <input type="date" id="date-input" placeholder="yyy-mm-dd">
     <button id="search">Search</button>
     <div id='explanation-container'></div>
-  </div>
-  
+    <div id='photo-save'>
+      </div>
+    </div>
+
 </body>
+
 </html>
