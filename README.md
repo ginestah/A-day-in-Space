@@ -84,6 +84,7 @@ function showNasaPhoto(data) {
 
 # Change-log
 Decided to display image of the day as a background
+
 Switched from flexbox to grid
 
 
