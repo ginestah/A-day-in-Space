@@ -26,8 +26,6 @@ function showNasaPhoto(data) {
   <footer class='copyright'>&copy;${data.copyright}</footer>
   <button id="save">Save Photo for Session</button>
   `
-  //create even listener for save photo button
-
   let explanationContainer = document.querySelector('#explanation-container')
   explanationContainer.insertAdjacentHTML('beforeend', nasaDescription)
   document.querySelector('body').style.backgroundImage = `url('${data.hdurl}')`
@@ -50,8 +48,20 @@ let button = document.querySelector('#search')
 button.addEventListener('click', (e) => {
   e.preventDefault()
   let value = document.querySelector('#date-input').value
+  // console.log(value)
+
+  //check if 
+  if (value < '1995-06-16') {
+    value = `${randomInt(1996, 2020)}-${randomInt(1, 12)}-${randomInt(1, 20)}`
+    console.log(value)
+  }
   fetchData(value)
 })
+
+//random number function between two values https://stackoverflow.com/questions/4959975/generate-random-number-between-two-numbers-in-javascript
+function randomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
 
 
 //remove description text when new photo is loaded
