@@ -4,42 +4,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Happy Space Day</title>
+  <title>A day in Space</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="./style.css">
   <script defer src='./app.js'></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
-  <h1 id='title'>Happy Space Day</h1>
-  <div id="search-section">
-    <h3 id='format-label'> Enter a date to see the NASA photo of that day</h3>
-    <input type="date" id="date-input" placeholder="yyy-mm-dd">
-    <button id="search">Search</button>
-    <div id='explanation-container'></div>
-    <div id='photo-save'>
-    </div>
+  <div id='title-container'>
+    <header id='title'>
+      <img src="https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png" alt="logo"
+        id='nasa-logo'>
+      <h1>A day in Space</h1>
+    </header>
   </div>
-  <nav>
-    <ul class='menu'>
-      <a href="https://api.nasa.gov/" target="_blank">
-        <li id='nasa-emblem'><img src="https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png"
-            alt="Nasa emblem" class='nasa-emblem'></li>
-      </a>
-      <a href="https://github.com/ginestah" target="_blank">
-        <li id='github'><img src="https://res.cloudinary.com/briandanger/image/upload/v1568954107/github_fpykxh.png"
-            alt="github logo" class='github-logo'></li>
-      </a>
-      <a href="https://www.linkedin.com/in/huckleberry-ginesta-84155b186/" target="_blank">
-        <li id='linkedin'><img src="https://res.cloudinary.com/briandanger/image/upload/v1568954107/linkedin_vnvo6s.png"
-            alt="linkedin logo" class='linkedin-logo'></li>
-      </a>
 
-    </ul>
-  </nav>
+  <div id="parent-container">
+    <form>
+      <h2>Enter date to find NASA photo for that day.</h2>
+      <input type='date' id='date-input'>
+      <button id="search">Search</button>
+      <button id="random">Random</button>
+    </form>
+  </div>
+
+  <div id='explanation-container'>
+  </div>
+  <div id='photo-save'></div>
 </body>
 
 </html>

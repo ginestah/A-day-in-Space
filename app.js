@@ -6,7 +6,7 @@ async function fetchData(date) {
     const data = response.data
     removeDescription()
     showNasaPhoto(data)
-    // console.log(data)
+    console.log(data)
     return response
   } catch (error) {
     console.log(error)
@@ -22,19 +22,21 @@ function showNasaPhoto(data) {
     data.copyright = "NASA APOD"
   }
   let nasaDescription = `
+  <img src="${data.hdurl}" alt ='nasa APOD' width='400px' height='auto' id='displayed-photo'>
   <p id="photo-explanation">${data.explanation}</p>
-  <footer class='copyright'>&copy;${data.copyright}</footer>
+  <div class='copyright'>&copy;${data.copyright}</div>
   <button id="save">Save Photo for Session</button>
   `
   let explanationContainer = document.querySelector('#explanation-container')
   explanationContainer.insertAdjacentHTML('beforeend', nasaDescription)
-  document.querySelector('body').style.backgroundImage = `url('${data.hdurl}')`
+  // document.querySelector('body').style.backgroundImage = `url('${data.hdurl}')`
 
   //create event listener for save photo button that appears with previous function
   let photoSave = `
-  <img src="${data.hdurl}" alt="saved image" width="200px" height="auto">
+  <img src="${data.hdurl}" alt="saved image" width="200px" height="200px">
   `
-  document.querySelector('#save').addEventListener('click', () => {
+  document.querySelector('#save').addEventListener('click', (e) => {
+    e.preventDefault()
     let photoContainer = document.querySelector('#photo-save')
     photoContainer.insertAdjacentHTML('beforeend', photoSave)
   })
@@ -42,6 +44,15 @@ function showNasaPhoto(data) {
 
 
 
+
+
+//Button to grab random photo for user
+let random = document.querySelector('#random')
+random.addEventListener('click', (e) => {
+  e.preventDefault()
+  let value = `${randomInt(1996, 2020)}-${randomInt(1, 12)}-${randomInt(1, 20)}`
+  fetchData(value)
+})
 
 //Dynamically search dates to choose photo using html input
 let button = document.querySelector('#search')
@@ -54,6 +65,9 @@ button.addEventListener('click', (e) => {
   if (value < '1995-06-16') {
     value = `${randomInt(1996, 2020)}-${randomInt(1, 12)}-${randomInt(1, 20)}`
     // console.log(value)
+  } else if (value == 0) {
+    alert('cannot be empty')
+
   }
   fetchData(value)
 })
