@@ -4,7 +4,7 @@ body{
   display: grid;
 grid-template-columns:40px 50px auto 50px 40px ;
 grid-template-rows:25% 100px auto ;
-
+font-family: 'Space Grotesk', sans-serif;
 
 
   color:#feda4a;
@@ -14,12 +14,12 @@ grid-template-rows:25% 100px auto ;
 }
 #title{
 grid-column-start: 3;
-background-color:#69a197 ;
+/* background-color:#69a197 ; */
 }
 #search-section{
   grid-column-start: 3;
   grid-row-start: 4;
-  background-color: #7e846b;
+  /* background-color: #7e846b; */
 
 }
 

@@ -6,7 +6,7 @@ async function fetchData(date) {
     const data = response.data
     removeDescription()
     showNasaPhoto(data)
-    console.log(data)
+    // console.log(data)
     return response
   } catch (error) {
     console.log(error)
@@ -53,7 +53,7 @@ button.addEventListener('click', (e) => {
   //check if 
   if (value < '1995-06-16') {
     value = `${randomInt(1996, 2020)}-${randomInt(1, 12)}-${randomInt(1, 20)}`
-    console.log(value)
+    // console.log(value)
   }
   fetchData(value)
 })
