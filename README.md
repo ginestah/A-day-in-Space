@@ -1,6 +1,6 @@
 
 #  **App Title**:
-Happy Space Day
+A day in Space
 # **App Description**:
 Access photo of the day from NASA API to display the photo of a users chosen day, as well as a description of the photo.
 # **API**: 
@@ -36,7 +36,7 @@ Access photo of the day from NASA API to display the photo of a users chosen day
 |---|---| ---|
 |Jan 25-26| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
 |Jan 26| Project Approval + Pseudocode | Complete
-|Jan 27| MVP | Incomplete
+|Jan 27| MVP | Complete
 |Jan 28| Advanced styling| Incomplete
 |Jan 29| Desktop styling | Incomplete
 |Feb 1| Presentations/Project Submission | Incomplete
