@@ -20,10 +20,11 @@ function showNasaPhoto(data) {
     data.copyright = "NASA APOD"
   }
   let nasaDescription = `
-  <img src="${data.hdurl}" alt ='nasa APOD' width='400px' height='auto' id='displayed-photo'>
+  <img src="${data.hdurl}" alt ='nasa APOD' width='350vh' height='auto' id='displayed-photo'>
+  <button id="save">Save Photo for Session</button>
   <p id="photo-explanation">${data.explanation}</p>
   <div class='copyright'>&copy;${data.copyright}</div>
-  <button id="save">Save Photo for Session</button>
+  
   `
   let explanationContainer = document.querySelector('#explanation-container')
   explanationContainer.insertAdjacentHTML('beforeend', nasaDescription)
@@ -31,7 +32,7 @@ function showNasaPhoto(data) {
 
   //create event listener for save photo button that appears with previous function
   let photoSave = `
-  <img src="${data.hdurl}" alt="saved image" width="200px" height="200px">
+  <a href="${data.hdurl}" target="_blank"><img src="${data.hdurl}" alt="high def photo" height='200px' width='200px'></a>
   `
   document.querySelector('#save').addEventListener('click', (e) => {
     e.preventDefault()

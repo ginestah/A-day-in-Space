@@ -88,4 +88,9 @@ Decided not to display the image as a background because it either came out dist
 
 Switched back to flexbox
 
+Renamed app to "A day in Space"
+
+Some interesting dates for examples:
+2-13-2011
+
 
