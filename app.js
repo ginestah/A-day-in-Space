@@ -16,11 +16,15 @@ async function fetchData(date) {
 //function to append content to the DOM
 
 function showNasaPhoto(data) {
+// This if statements checks to see if there is copyright data, if there is it displays it, if not copyright is given to NASA APOD
+
   if (data.copyright == undefined) {
     data.copyright = "NASA APOD"
   }
+
+  // This if statement checks to see if there is an hdurl, if undefined it means there is a video, and so the video is shown.
   if (data.hdurl == undefined) {
-    let nasaDescription = `
+    let nasaVideo = `
     <iframe width='350vw' height='auto' src='${data.url}'
 
     <button id="save">Save Photo for Session</button>
@@ -28,7 +32,7 @@ function showNasaPhoto(data) {
     <div class='copyright'>&copy;${data.copyright}</div>
     `
     let explanationContainer = document.querySelector('#explanation-container')
-    explanationContainer.insertAdjacentHTML('beforeend', nasaDescription)
+    explanationContainer.insertAdjacentHTML('beforeend', nasaVideo)
   } else {
     let nasaDescription = `
   <a href="${data.hdurl}" target="_blank"><img src="${data.hdurl}" alt="displayed photo" height='auto' width='350vw'></a><br>
@@ -39,7 +43,6 @@ function showNasaPhoto(data) {
   `
     let explanationContainer = document.querySelector('#explanation-container')
     explanationContainer.insertAdjacentHTML('beforeend', nasaDescription)
-    // document.querySelector('body').style.backgroundImage = `url('${data.hdurl}')`
 
     //create event listener for save photo button that appears with previous function
     let photoSave = `
