@@ -50,18 +50,18 @@ Access photo of the day from NASA API to display the photo of a users chosen day
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Render applicable content to the DOM | H | 3hrs| 1hr|1hr|
+| Render applicable content to the DOM | H | 3hrs| 3hr|3hr|
 | User search picture by date| H | 3hrs| 30mins|30mins|
 | Adjust time for dates pre 1995|M|3hrs|3hrs|3hrs|
 | Basic HTML and CSS| H | 2hrs|2hrs | 2hrs |
 | Define flex items and containers| H | 2hrs|2hrs| 2hrs |
 |Reset DOM if another date is searched, so no stacked photos|M|2hr|2hrs|2hrs|
-|Media Queries for responsive design|L|3hrs|0|0|
+|Media Queries for responsive design|L|3hrs|3hrs|3hrs|
 |Add CSS animations|L|3hrs|0|0|
 |Further CSS styling|L|3hrs|3hr|3hr|
 |Utilize second API for full screen mode|L|2hrs|0|0|
-|Look into system storage for saving photos|M|3hr|0|0|
-|Add alert if input field is left blank|L|3hr|0|0|
+|Allow session saving of photos|M|3hr|2hrs|2hrs|
+|Disable search button if input field is blank|L|3hr|1hr|1hr|
 | Total |H|29hrs|0|0|
 
 # Code-Snippet
@@ -95,5 +95,6 @@ Some interesting dates for examples:
 1-12-2015
 8-13-2013
 9-20-2011 (video)
+2-5-2012
 
 
