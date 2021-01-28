@@ -13,8 +13,6 @@ async function fetchData(date) {
   }
 }
 
-
-
 //function to append content to the DOM
 
 function showNasaPhoto(data) {
@@ -53,6 +51,18 @@ random.addEventListener('click', (e) => {
   let value = `${randomInt(1996, 2020)}-${randomInt(1, 12)}-${randomInt(1, 20)}`
   fetchData(value)
 })
+
+
+// disable search button if no input provided
+function disable() {
+  if (document.querySelector('#date-input').value === '') {
+    document.querySelector('#search').disabled = true
+  } else {
+    document.querySelector('#search').disabled = false
+  }
+}
+
+
 
 //Dynamically search dates to choose photo using html input
 let button = document.querySelector('#search')
