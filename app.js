@@ -25,7 +25,7 @@ function showNasaPhoto(data) {
   // This if statement checks to see if there is an hdurl, if undefined it means there is a video, and so the video is shown.
   if (data.hdurl == undefined) {
     let nasaVideo = `
-    <iframe width='350vw' height='auto' src='${data.url}'>
+    <iframe width='350vw' height='auto' src='${data.url}' allowfullscreen='allowfullscreen'>
     <p id="photo-explanation">${data.explanation}</p>
     <div class='copyright'>&copy;${data.copyright}</div>
     `
