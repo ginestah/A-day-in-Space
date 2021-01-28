@@ -19,26 +19,39 @@ function showNasaPhoto(data) {
   if (data.copyright == undefined) {
     data.copyright = "NASA APOD"
   }
-  let nasaDescription = `
-  <img src="${data.hdurl}" alt ='nasa APOD' width='350vh' height='auto' id='displayed-photo'>
+  if (data.hdurl == undefined) {
+    let nasaDescription = `
+    <iframe width='350vw' height='auto' src='${data.url}'
+
+    <button id="save">Save Photo for Session</button>
+    <p id="photo-explanation">${data.explanation}</p>
+    <div class='copyright'>&copy;${data.copyright}</div>
+    `
+    let explanationContainer = document.querySelector('#explanation-container')
+    explanationContainer.insertAdjacentHTML('beforeend', nasaDescription)
+  } else {
+    let nasaDescription = `
+  <a href="${data.hdurl}" target="_blank"><img src="${data.hdurl}" alt="displayed photo" height='auto' width='350vw'></a><br>
   <button id="save">Save Photo for Session</button>
   <p id="photo-explanation">${data.explanation}</p>
   <div class='copyright'>&copy;${data.copyright}</div>
-  
-  `
-  let explanationContainer = document.querySelector('#explanation-container')
-  explanationContainer.insertAdjacentHTML('beforeend', nasaDescription)
-  // document.querySelector('body').style.backgroundImage = `url('${data.hdurl}')`
 
-  //create event listener for save photo button that appears with previous function
-  let photoSave = `
-  <a href="${data.hdurl}" target="_blank"><img src="${data.hdurl}" alt="high def photo" height='200px' width='200px'></a>
   `
-  document.querySelector('#save').addEventListener('click', (e) => {
-    e.preventDefault()
-    let photoContainer = document.querySelector('#photo-save')
-    photoContainer.insertAdjacentHTML('beforeend', photoSave)
-  })
+    let explanationContainer = document.querySelector('#explanation-container')
+    explanationContainer.insertAdjacentHTML('beforeend', nasaDescription)
+    // document.querySelector('body').style.backgroundImage = `url('${data.hdurl}')`
+
+    //create event listener for save photo button that appears with previous function
+    let photoSave = `
+  <a href="${data.hdurl}" target="_blank"><img src="${data.hdurl}" alt="high def photo" height='auto' width='350vw'></a>
+  `
+    document.querySelector('#save').addEventListener('click', (e) => {
+      e.preventDefault()
+      let photoContainer = document.querySelector('#photo-save')
+      photoContainer.insertAdjacentHTML('beforeend', photoSave)
+
+    })
+  }
 }
 
 
