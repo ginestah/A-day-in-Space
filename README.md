@@ -62,7 +62,7 @@ Access photo of the day from NASA API to display the photo of a users chosen day
 |Utilize second API for full screen mode|L|2hrs|0|0|
 |Allow session saving of photos|M|3hr|2hrs|2hrs|
 |Disable search button if input field is blank|L|3hr|1hr|1hr|
-| Total |H|29hrs|0|0|
+| Total |H|32hrs|21.5hrs|21.5hrs|
 
 # Code-Snippet
 

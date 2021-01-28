@@ -37,6 +37,15 @@ color:#D62828;
   font-size: 2vw;
 
 }
+#meteor{
+  transform:scale(-1,-1);
+  float: right;
+  width: 30vw;
+  height: auto;
+
+
+
+}
 #photo-save{
   justify-content: center;
   align-items:center;
