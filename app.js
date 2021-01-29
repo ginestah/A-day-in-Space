@@ -1,3 +1,9 @@
+// global variables
+const random = document.querySelector('#random')
+const searchButton = document.querySelector('#search')
+
+
+
 
 //function to grab data
 async function fetchData(date) {
@@ -21,7 +27,6 @@ function showNasaPhoto(data) {
   if (data.copyright == undefined) {
     data.copyright = "NASA APOD"
   }
-
   // This if statement checks to see if there is an hdurl, if undefined it means there is a video, and so the video is shown.
   if (data.hdurl == undefined) {
     let nasaVideo = `
@@ -60,7 +65,6 @@ function showNasaPhoto(data) {
 
 
 //Button to grab random photo for user
-let random = document.querySelector('#random')
 random.addEventListener('click', (e) => {
   e.preventDefault()
   let value = `${randomInt(1996, 2020)}-${randomInt(1, 12)}-${randomInt(1, 20)}`
@@ -80,8 +84,7 @@ function disable() {
 
 
 //Dynamically search dates to choose photo using html input
-let button = document.querySelector('#search')
-button.addEventListener('click', (e) => {
+searchButton.addEventListener('click', (e) => {
   e.preventDefault()
   let value = document.querySelector('#date-input').value
   // console.log(value)
@@ -97,11 +100,12 @@ button.addEventListener('click', (e) => {
   fetchData(value)
 })
 
+
+
 //random number function between two values https://stackoverflow.com/questions/4959975/generate-random-number-between-two-numbers-in-javascript
 function randomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
-
 
 //remove description text and old photo when new photo is loaded
 function removeDescription() {

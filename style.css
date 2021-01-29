@@ -40,8 +40,8 @@ color:#D62828;
 #meteor{
   transform:scale(-1,-1);
   float: right;
-  width: 30vw;
-  height: auto;
+  width: 40vw;
+  height: 60vh;
 }
 #photo-save{
   display: flex;
@@ -76,14 +76,31 @@ input{
 }
 
 @media only screen and (max-width: 768px){
+  body{
+    background-color: #020402;
+
+  }
+ .logo{
+   width:30px;
+   height: auto;
+   float: left;
+   padding: 2px;
+   flex-direction: column;
+ }
+ 
  #title-container{
    background-color: #D62828;
  }
  #title{
    color:#FAA916;
-   font-size: 16px
+   font-size: .9em;
  }
  #explanation-container{
-   font-size: 16px;
+   font-size: .9em;
+
  } 
+ #photo-save{
+   width: 50%;
+   height: auto;
+ }
 }
