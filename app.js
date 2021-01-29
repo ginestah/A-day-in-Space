@@ -50,10 +50,10 @@ function showNasaPhoto(data) {
       e.preventDefault()
       let photoContainer = document.querySelector('#photo-save')
       photoContainer.insertAdjacentHTML('beforeend', photoSave)
-
     })
   }
 }
+
 
 
 

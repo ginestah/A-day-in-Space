@@ -47,8 +47,12 @@ color:#D62828;
 
 }
 #photo-save{
-  justify-content: center;
-  align-items:center;
+  display: flex;
+  flex-wrap: wrap;
+}
+#saved-photo{
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 form{
   color:#D62828;
