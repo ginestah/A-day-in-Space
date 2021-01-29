@@ -42,9 +42,6 @@ color:#D62828;
   float: right;
   width: 30vw;
   height: auto;
-
-
-
 }
 #photo-save{
   display: flex;
@@ -88,7 +85,5 @@ input{
  }
  #explanation-container{
    font-size: 16px;
- }
-
- 
+ } 
 }

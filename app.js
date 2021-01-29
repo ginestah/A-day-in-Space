@@ -88,7 +88,7 @@ button.addEventListener('click', (e) => {
 
   //check if 
   if (value < '1995-06-16') {
-    value = `${randomInt(1996, 2020)}-${randomInt(1, 12)}-${randomInt(1, 20)}`
+    value = `${randomInt(1996, 2020)}-${randomInt(1, 12)}-${randomInt(1, 25)}`
     // console.log(value)
   } else if (value == 0) {
     alert('cannot be empty')
@@ -103,7 +103,7 @@ function randomInt(min, max) {
 }
 
 
-//remove description text when new photo is loaded
+//remove description text and old photo when new photo is loaded
 function removeDescription() {
   const explanationContainer = document.querySelector('#explanation-container')
   while (explanationContainer.lastChild) {

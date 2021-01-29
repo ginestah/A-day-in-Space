@@ -37,8 +37,8 @@ Access photo of the day from NASA API to display the photo of a users chosen day
 |Jan 25-26| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
 |Jan 26| Project Approval + Pseudocode | Complete
 |Jan 27| MVP | Complete
-|Jan 28| Advanced styling| Incomplete
-|Jan 29| Desktop styling | Incomplete
+|Jan 28| Advanced styling| Complete*
+|Jan 29| Desktop styling | Complete*
 |Feb 1| Presentations/Project Submission | Incomplete
 
 # **Priority Matrix**
