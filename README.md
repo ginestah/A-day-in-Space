@@ -1,6 +1,9 @@
 
 #  **App Title**:
 A day in Space
+
+[Link to live site](https://ginestah.github.io/A-day-in-Space/)
+
 # **App Description**:
 Access photo of the day from NASA API to display the photo of a users chosen day, as well as a description of the photo.
 # **API**: 
@@ -57,9 +60,9 @@ Access photo of the day from NASA API to display the photo of a users chosen day
 | Define flex items and containers| H | 2hrs|2hrs| 2hrs |
 |Reset DOM if another date is searched, so no stacked photos|M|2hr|2hrs|2hrs|
 |Media Queries for responsive design|L|3hrs|3hrs|3hrs|
-|Add CSS animations|L|3hrs|0|0|
+|Add CSS animations|L|3hrs|N/A|N/A|
 |Further CSS styling|L|3hrs|3hr|3hr|
-|Utilize second API for full screen mode|L|2hrs|0|0|
+|Utilize second API for full screen mode|L|2hrs|N/A|N/A|
 |Allow session saving of photos|M|3hr|2hrs|2hrs|
 |Disable search button if input field is blank|L|3hr|1hr|1hr|
 | Total |H|32hrs|21.5hrs|21.5hrs|
