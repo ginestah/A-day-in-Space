@@ -5,14 +5,13 @@ const searchButton = document.querySelector('#search')
 
 
 
-//function to grab data
+//function to grab data/ axios call
 async function fetchData(date) {
   try {
     let response = await axios.get(`https://api.nasa.gov/planetary/apod/?date=${date}&api_key=dJXmtgi5Ot3o758TqppoAXRJ2SRTk6sTEtJ141dM`)
     const data = response.data
     removeDescription()
     showNasaPhoto(data)
-    // console.log(data)
     return response
   } catch (error) {
     console.log(error)
@@ -37,6 +36,7 @@ function showNasaPhoto(data) {
     let explanationContainer = document.querySelector('#explanation-container')
     explanationContainer.insertAdjacentHTML('beforeend', nasaVideo)
   } else {
+  //if instead there is a photo the photo is appended with a description and the copyright info
     let nasaDescription = `
   <a href="${data.hdurl}" target="_blank"><img src="${data.hdurl}" alt="displayed photo" height='auto' width='50%'></a><br>
   <button id="save">Save Photo for Session</button>
@@ -58,8 +58,6 @@ function showNasaPhoto(data) {
     })
   }
 }
-
-
 
 
 
@@ -87,22 +85,17 @@ function disable() {
 searchButton.addEventListener('click', (e) => {
   e.preventDefault()
   let value = document.querySelector('#date-input').value
-  // console.log(value)
 
-  //check if 
+  //check if date is before June 16th 1995 and if it is randomly generate a date to show.
   if (value < '1995-06-16') {
     value = `${randomInt(1996, 2020)}-${randomInt(1, 12)}-${randomInt(1, 25)}`
-    // console.log(value)
-  } else if (value == 0) {
-    alert('cannot be empty')
-
   }
   fetchData(value)
 })
 
 
 
-//random number function between two values https://stackoverflow.com/questions/4959975/generate-random-number-between-two-numbers-in-javascript
+//random number function between two values borrowed from: https://stackoverflow.com/questions/4959975/generate-random-number-between-two-numbers-in-javascript
 function randomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }

@@ -40,8 +40,8 @@ Access photo of the day from NASA API to display the photo of a users chosen day
 |Jan 25-26| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
 |Jan 26| Project Approval + Pseudocode | Complete
 |Jan 27| MVP | Complete
-|Jan 28| Advanced styling| Complete*
-|Jan 29| Desktop styling | Complete*
+|Jan 28| Advanced styling| Complete
+|Jan 29| Desktop styling | Complete
 |Feb 1| Presentations/Project Submission | Incomplete
 
 # **Priority Matrix**
@@ -60,30 +60,34 @@ Access photo of the day from NASA API to display the photo of a users chosen day
 | Define flex items and containers| H | 2hrs|2hrs| 2hrs |
 |Reset DOM if another date is searched, so no stacked photos|M|2hr|2hrs|2hrs|
 |Media Queries for responsive design|L|3hrs|3hrs|3hrs|
-|Add CSS animations|L|3hrs|N/A|N/A|
 |Further CSS styling|L|3hrs|3hr|3hr|
-|Utilize second API for full screen mode|L|2hrs|N/A|N/A|
+|Conditional to render video to DOM|H|2hrs|2hrs|2hrs|
 |Allow session saving of photos|M|3hr|2hrs|2hrs|
 |Disable search button if input field is blank|L|3hr|1hr|1hr|
-| Total |H|32hrs|21.5hrs|21.5hrs|
+| Total |H|32hrs|23.5hrs|21.5hrs|
 
 # Code-Snippet
 
 Added function to add photo as a background image, display the photo description and copyright. The if statement checks to see if there is a copyright on the image, if undefined copyright is given to NASA APOD, otherwise the photographer is shown as copyright holder.
 
 ``` 
-function showNasaPhoto(data) {
-  if (data.copyright == undefined) {
-    data.copyright = "NASA APOD"
-  }
-  let nasaDescription = `
+  // This if statement checks to see if there is an hdurl, if undefined it means there is a video, and so the video is shown.
+
+if (data.hdurl == undefined) {
+    let nasaVideo = `
+    <iframe width='350vw' height='auto' src='${data.url}' allowfullscreen='allowfullscreen'>
+    <p id="photo-explanation">${data.explanation}</p>
+    <div class='copyright'>&copy;${data.copyright}</div>
+    `
+    let explanationContainer = document.querySelector('#explanation-container')
+    explanationContainer.insertAdjacentHTML('beforeend', nasaVideo)
+  } else {
+  //if instead there is a photo the photo is appended with a description and the copyright info
+    let nasaDescription = `
+  <a href="${data.hdurl}" target="_blank"><img src="${data.hdurl}" alt="displayed photo" height='auto' width='50%'></a><br>
+  <button id="save">Save Photo for Session</button>
   <p id="photo-explanation">${data.explanation}</p>
-  <footer class='copyright'>&copy;${data.copyright}</footer>
-  `
-  let explanationContainer = document.querySelector('#explanation-container')
-  explanationContainer.insertAdjacentHTML('beforeend', nasaDescription)
-  document.querySelector('body').style.backgroundImage = `url('${data.hdurl}')`
-}
+  <div class='copyright'>&copy;${data.copyright}</div>
 ```
 
 # Change-log
@@ -92,6 +96,8 @@ Decided not to display the image as a background because it either came out dist
 Switched back to flexbox
 
 Renamed app to "A day in Space"
+
+After shown a date that doesn't work realized some of the APOD data were videos instead of photos, implemented a conditional to check if video and imbed the youtube video into the page, with widescreen capabilities.
 
 Some interesting dates for examples:
 2-13-2011
