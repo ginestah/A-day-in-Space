@@ -67,8 +67,7 @@ Access photo of the day from NASA API to display the photo of a users chosen day
 | Total |H|32hrs|23.5hrs|21.5hrs|
 
 # Code-Snippet
-
-Added function to add photo as a background image, display the photo description and copyright. The if statement checks to see if there is a copyright on the image, if undefined copyright is given to NASA APOD, otherwise the photographer is shown as copyright holder.
+ display the photo description and copyright. The conditional checks to see if there is a copyright on the image, if undefined copyright is given to NASA APOD, otherwise the photographer is shown as copyright holder.
 
 ``` 
   // This if statement checks to see if there is an hdurl, if undefined it means there is a video, and so the video is shown.
